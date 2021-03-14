@@ -27,12 +27,6 @@ export class CustomerEntity extends BaseEntity implements Customer {
   @OneToOne(() => AccountEntity)
   public account: AccountEntity;
 
-  @CreateDateColumn({ name: 'created_at'})
-  public createdAt: Date;
-
-  @UpdateDateColumn({ name: 'updated_at'})
-  public updatedAt: Date;
-
   @BeforeInsert()
   @BeforeUpdate()
   public hashPassword(): void{

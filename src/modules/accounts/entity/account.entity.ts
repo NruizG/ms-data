@@ -22,10 +22,4 @@ export class AccountEntity extends BaseEntity implements Account {
   @OneToOne(() => CustomerEntity, customer => customer.account)
   @JoinColumn({ name: 'customer' })
   public customer: CustomerEntity;
-
-  @CreateDateColumn({ name: 'created_at'})
-  public createdAt: Date;
-
-  @UpdateDateColumn({ name: 'updated_at'})
-  public updatedAt: Date;
 }

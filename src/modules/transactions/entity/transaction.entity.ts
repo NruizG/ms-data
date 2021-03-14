@@ -19,9 +19,6 @@ export class TransactionEntity extends BaseEntity implements Transaction {
   @JoinColumn({ name: 'account' })
   public account: AccountEntity;
 
-  @CreateDateColumn({ name: 'created_at'})
+  @Column({ default: () => `now()`, name: 'created_at' })
   public createdAt: Date;
-
-  @UpdateDateColumn({ name: 'updated_at'})
-  public updatedAt: Date;
 }
