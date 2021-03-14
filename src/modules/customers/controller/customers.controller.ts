@@ -7,6 +7,13 @@ import { CustomersService } from '../service/customers.service';
   model: {
     type: CustomerEntity,
   },
+  query: {
+    join: {
+      account: {
+        eager: false
+      }
+    }
+  }
 })
 @Controller('customers')
 export class CustomersController implements CrudController<CustomerEntity> {
