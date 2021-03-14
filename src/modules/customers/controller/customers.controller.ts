@@ -6,13 +6,6 @@ import { CustomersService } from '../service/customers.service';
 @Crud({
   model: {
     type: CustomerEntity,
-  },
-  query: {
-    join: {
-      account: {
-        eager: false
-      }
-    }
   }
 })
 @Controller('customers')
