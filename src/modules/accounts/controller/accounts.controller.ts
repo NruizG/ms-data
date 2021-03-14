@@ -9,7 +9,10 @@ import { AccountsService } from '../service/accounts.service';
   },
   query: {
     join: {
-      customer:{
+      customer: {
+        eager: false
+      },
+      transactions: {
         eager: false
       }
     }
