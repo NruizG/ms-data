@@ -7,6 +7,13 @@ import { AccountsService } from '../service/accounts.service';
   model: {
     type: AccountEntity,
   },
+  query: {
+    join: {
+      customer:{
+        eager: false
+      }
+    }
+  }
 })
 @Controller('accounts')
 export class AccountsController implements CrudController<AccountEntity> {

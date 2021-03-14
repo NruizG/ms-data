@@ -25,7 +25,6 @@ export class CustomerEntity extends BaseEntity implements Customer {
   public password: string;
 
   @OneToOne(() => AccountEntity)
-  @JoinColumn({ name: 'account' })
   public account: AccountEntity;
 
   @CreateDateColumn({ name: 'created_at'})
