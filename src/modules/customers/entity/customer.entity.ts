@@ -13,12 +13,12 @@ export class CustomerEntity extends BaseEntity implements Customer {
   @Column()
   public name: string;
 
-  @Column()
-  public dni: string;
-
   @Column({
     unique: true
   })
+  public dni: string;
+
+  @Column()
   public email: string;
 
   @Column()
