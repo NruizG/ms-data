@@ -9,7 +9,7 @@ export class TransactionEntity extends BaseEntity implements Transaction {
   @PrimaryGeneratedColumn()
   public id: number;
 
-  @Column()
+  @Column({type: 'bigint' })
   public amount: number;
 
   @Column()

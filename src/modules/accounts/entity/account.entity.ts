@@ -13,7 +13,7 @@ export class AccountEntity extends BaseEntity implements Account {
   })
   public number: number;
 
-  @Column()
+  @Column({ type: 'bigint' })
   public balance: number;
 
   @OneToMany(() => TransactionEntity, transaction => transaction.account)
